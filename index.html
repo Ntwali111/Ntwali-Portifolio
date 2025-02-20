@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cynthia Ntwali - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <button id="darkModeToggle">🌙</button>
+        <div class="hero">
+            <img src="./Cynthia.jpg" alt="Cynthia Ntwali">
+
+
+            <div class="hero-text">
+                <h1>Hi, I'm Cynthia Ntwali</h1>
+                <p>A passionate Software Engineer dedicated to creating innovative solutions</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <p>Passionate about building innovative solutions and creating impactful software.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Web Development</h3>
+                        <p>Expertise in modern web technologies and frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill-cards">
+                <div class="skill-card floating">
+                    <h3>HTML5</h3>
+                    <p>Semantic markup and web structure</p>
+                </div>
+                <div class="skill-card floating">
+                    <h3>CSS3</h3>
+                    <p>Styling and animations</p>
+                </div>
+                <div class="skill-card floating">
+                    <h3>JavaScript (ES6+)</h3>
+                    <p>Interactive web functionality</p>
+                </div>
+                <div class="skill-card floating">
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first development</p>
+                </div>
+                <div class="skill-card floating">
+                    <h3>Git Version Control</h3>
+                    <p>Collaborative development</p>
+                </div>
+                <div class="skill-card floating">
+                    <h3>Cross-Browser Compatibility</h3>
+                    <p>Consistent user experience</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="experience-content">
+                        <h3>Software Developer</h3>
+                        <p>Developed and maintained web applications using modern technologies.</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <i class="fas fa-code"></i>
+                    <div class="experience-content">
+                        <h3>Frontend Engineer</h3>
+                        <p>Created responsive and user-friendly interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="education-content">
+                        <h3>African Leadership University</h3>
+                        <p>Bachelor's Degree in Software Engineering</p>
+                        <p>2024 - Present</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>Portfolio Website</h3>
+                    <p>Designed and developed a personal portfolio website.</p>
+                </div>
+                <div class="project-item">
+                    <h3>E-commerce Platform</h3>
+                    <p>Built a full-stack e-commerce application.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                </div>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Cynthia Ntwali</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            darkModeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+
+        // Update current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
